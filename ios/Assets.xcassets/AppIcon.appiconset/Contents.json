@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL·E 2023-11-27 14.36.56 - A sleek and modern app icon design for an e-commerce application specializing in sweaters. The icon should feature a stylized, cozy sweater in soft co.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
