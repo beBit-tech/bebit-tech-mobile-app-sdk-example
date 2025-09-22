@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Complete setup process for BeBit Tech's OmniSegmentKit analytics SDK
         // Installation Guide: https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Installation
         // Enable debug logs and initialize with API key and TID
+        // Please modify the key and tid from your omnisegment organization setting
         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki#1-debug-logs-and-sdk-initialization
         OmniSegment.enableDebugLogs()
-        OmniSegment.initialize("d7342b5b-f38c-469a-897a-0688864189b3", tid: "rubys")
+        OmniSegment.initialize("XXXXX-XXXX-XXXX-XXXX-XXXX", tid: "OA-xxxx")
 
         // Set application metadata for analytics identification
         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events
