@@ -30,8 +30,8 @@
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events
     [OmniSegment setAppName:@"test-app"];
     [OmniSegment setBundleId:@"test-BundleId"];
-    [OmniSegment setBundleVersion:@"test-20241030"];
-    [OmniSegment setDeviceId:@"B3D94381-CF9A-4885-AEDD-D0B90F4AEF75"];
+    [OmniSegment setBundleVersion:@"test-XXXX"];
+    [OmniSegment setDeviceId:@"XXXX-XXX-XXX-XXX-XXXX"];
 
     // MARK: - Firebase FCM Token & Event Tracking
     // Handle FCM token registration and track app open events
@@ -40,7 +40,7 @@
     
     // If the user has logged-in and you need to set the uid without login event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#objective-c-2
-    [OmniSegment setUidWithUid:@"omnisegment20240101"];
+    [OmniSegment setUidWithUid:@"omnisegmentXXX"];
 
     // Track app open
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
