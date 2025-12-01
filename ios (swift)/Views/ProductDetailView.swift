@@ -36,14 +36,14 @@ struct ProductDetailView: View {
             let productIdString = product.id.uuidString
             let osgProduct = OSGProduct(id: productIdString, name: product.name)
             osgProduct.price = NSNumber(value: product.price)
-
+            // OmniSegment SDK
             // Track product click event (when user navigates to detail view)
             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
             let clickEvent = OSGEvent.productClicked([osgProduct])
             clickEvent.location = "Home"
             clickEvent.locationTitle = "SewaterApp"
             OmniSegment.trackEvent(clickEvent)
-
+            // OmniSegment SDK
             // Track product detail view impression
             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
             let viewDetailEvent = OSGEvent.productImpression([osgProduct])

@@ -37,7 +37,7 @@ struct ProductRow: View {
                     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#osgproduct-properties
                     let productIdString = product.id.uuidString
                     let osgProduct = OSGProduct(id: productIdString, name: product.name)
-
+                    // OmniSegment SDK
                     // Track remove from cart event
                     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                     let event = OSGEvent.removeFromCart([osgProduct])

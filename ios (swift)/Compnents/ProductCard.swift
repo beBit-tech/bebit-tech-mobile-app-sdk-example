@@ -43,7 +43,7 @@ struct ProductCard: View {
                     let productIdString = product.id.uuidString
                     let osgProduct = OSGProduct(id: productIdString, name: product.name)
                     osgProduct.price = NSNumber(value: product.price)
-
+                    // OmniSegment SDK
                     // Track add to cart event
                     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                     var event = OSGEvent.addToCart([osgProduct])
@@ -65,7 +65,7 @@ struct ProductCard: View {
                     let productIdString = product.id.uuidString
                     let osgProduct = OSGProduct(id: productIdString, name: product.name)
                     osgProduct.price = NSNumber(value: product.price)
-
+                    // OmniSegment SDK
                     // Track add to wishlist event
                     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                     var event = OSGEvent.addToWishlist([osgProduct])

@@ -34,6 +34,7 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context _: Context) -> WKWebView {
         let webViewConfiguration = WKWebViewConfiguration()
         webViewConfiguration.applicationNameForUserAgent = "AppWebView"
+        // OmniSegment SDK
         // Add OmniSegment content controller for web-app analytics integration
         // This enables tracking of user interactions within the webview
         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#integrate-omnisegment-sdk-with-webview-pages

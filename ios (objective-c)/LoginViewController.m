@@ -26,6 +26,7 @@
     
     [self setupUI];
     [self setupGestures];
+    // OmniSegment SDK
     // Manually set current page for analytics tracking
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
     [OmniSegment setCurrentPage:@"Login"];

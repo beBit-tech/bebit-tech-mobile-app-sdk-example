@@ -70,7 +70,7 @@
     osgProduct.brand = @"chiikawa";
     osgProduct.sku = @"chiikawawa";
     osgProduct.variant = @"{\"color\": \"white\"}";
-    
+    // OmniSegment SDK
     // Track impression event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     OSGEvent *event = [OSGEvent productImpression:@[osgProduct]];
@@ -78,7 +78,7 @@
     event.locationTitle = @"product-detail";
     event.currencyCode = @"TWD";
     [OmniSegment trackEvent:event];
-
+    // OmniSegment SDK
     // Manually set current page for analytics tracking
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
     [OmniSegment setCurrentPage:@"Home"];

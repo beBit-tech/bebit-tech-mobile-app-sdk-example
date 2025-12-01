@@ -41,7 +41,7 @@
     // If the user has logged-in and you need to set the uid without login event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#objective-c-2
     [OmniSegment setUidWithUid:@"omnisegmentXXX"];
-
+    // OmniSegment SDK
     // Track app open
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     OSGEvent *event = [OSGEvent appOpen];

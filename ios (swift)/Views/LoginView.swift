@@ -60,6 +60,7 @@ struct LoginView: View {
             }
             .navigationBarBackButtonHidden(true)
             .onAppear {
+                // OmniSegment SDK
                 // Set current page for analytics tracking
                 // Page Tracking: https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
                 OmniSegment.setCurrentPage("Login")
@@ -75,6 +76,7 @@ struct LoginView: View {
             isShowingLoader = false
             if username != "", password == defaultPassword {
                 userLoginSuccess()
+                // OmniSegment SDK
                 // Track successful login event with user ID
                 // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#login
                 OmniSegment.login(uid: username)
@@ -89,7 +91,7 @@ struct LoginView: View {
         isShowingLoader = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             isShowingLoader = false
-
+            // OmniSegment SDK
             // Track user registration completion event
             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
             var event = OSGEvent.completeRegistration(label: ["regeType": regeType])

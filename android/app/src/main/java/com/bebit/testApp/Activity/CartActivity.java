@@ -81,7 +81,7 @@ public class CartActivity extends AppCompatActivity {
 
     double total = Math.round((managmentCart.getTotalFee() + tax + delivery) * 100) / 100;
     Double revenue = total;
-
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#purchases
     // Purpose: Track successful purchase transactions with transaction details (revenue, tax, shipping, products)
     OSGEvent purchaseEvent = OSGEvent.purchase(transactionId, revenue.intValue(), productsInCart);
@@ -121,11 +121,13 @@ public class CartActivity extends AppCompatActivity {
   @Override
   protected void onResume() {
     super.onResume();
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-current-page
     // Purpose: Track current page/screen for user journey analytics
     OmniSegment.setCurrentPage("Cart");
 
     List<OSGProduct> productsInCart = getProductsInCart();
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#checkout
     // Purpose: Track checkout initiation to measure cart-to-checkout conversion
     OSGEvent checkoutEvent = OSGEvent.checkout(productsInCart);

@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // OmniSegment SDK
         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-current-page
         // Purpose: Track current page/screen for user journey analytics
         OmniSegment.setCurrentPage("Login");
@@ -84,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (!username.isEmpty() && password.equals("Test")) {
 
                     Intent intent = new Intent(LoginActivity.this, com.bebit.testApp.Activity.MainActivity.class);
+                    // OmniSegment SDK
                     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-user
                     // Purpose: Track user login event and associate future events with this user ID
                     OmniSegment.login(username);
@@ -107,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
                         Map<String, Object> label = new HashMap<>();
                         label.put("email", email);
                         label.put("regType", regType);
-
+                        // OmniSegment SDK
                         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#complete-registration
                         // Purpose: Track user registration completion with custom attributes (email, registration type)
                         OSGEvent event = OSGEvent.completeRegistration(label);
