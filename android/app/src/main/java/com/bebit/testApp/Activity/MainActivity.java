@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
   private void submitSearchEvent(String searchQuery) {
     Map<String, Object> searchLabel = new HashMap<>();
     searchLabel.put("search_string", searchQuery);
-
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#submit-a-search
     // Purpose: Track search queries to understand user search behavior and intent
     OSGEvent searchEvent = OSGEvent.search(searchLabel);
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onResume() {
     super.onResume();
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-current-page
     // Purpose: Track current page/screen for user journey analytics
     OmniSegment.setCurrentPage("Home");
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
       osgProducts.add(osgProduct);
     }
-
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#product-impressions
     // Purpose: Track when products are displayed to users (for conversion funnel analysis)
     OSGEvent event = OSGEvent.productImpression(osgProducts);
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
       OSGProduct clickedProduct = new OSGProduct(item.getTitle(), item.getTitle());
       clickedProduct.price = (int) item.getPrice();
-
+      // OmniSegment SDK
       // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#product-clicks
       // Purpose: Track product click events to measure user engagement with products
       OSGEvent clickEvent = OSGEvent.productClicked(Collections.singletonList(clickedProduct));

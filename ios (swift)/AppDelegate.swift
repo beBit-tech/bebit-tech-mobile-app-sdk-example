@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         Messaging.messaging().delegate = self
 
         let omniSegmentInstance = OmniSegment()
-
+        // OmniSegment SDK
         // MARK: - OmniSegmentKit SDK Initialization
         // Complete setup process for BeBit Tech's OmniSegmentKit analytics SDK
         // Installation Guide: https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Installation
@@ -108,6 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("Received notification while app is in foreground: \(notification.request.content.userInfo)")
         let userInfo = notification.request.content.userInfo
         if let omnisegmentData = userInfo["omnisegment_data"] {
+            // OmniSegment SDK
             // Handle incoming push notifications and trigger app popups
             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Workflow-triggered-app-popup-setup
             OmniSegment.handleNotification(userInfo: userInfo)
@@ -126,6 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
     ) {
         if let omnisegmentData = userInfo["omnisegment_data"] {
+            // OmniSegment SDK
             // Handle incoming push notifications and trigger app popups
             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Workflow-triggered-app-popup-setup
             OmniSegment.handleNotification(userInfo: userInfo)

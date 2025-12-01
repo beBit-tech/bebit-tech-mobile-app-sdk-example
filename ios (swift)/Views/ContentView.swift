@@ -20,6 +20,7 @@ struct ContentView: View {
                 NavigationView {
                     ScrollView {
                         TextField("Search...", text: $searchQuery, onCommit: {
+                            // OmniSegment SDK
                             // Track search events with query string and location context
                             // Event Tracking Guide: https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events
                             let event = OSGEvent.search(label: ["search_string": searchQuery])

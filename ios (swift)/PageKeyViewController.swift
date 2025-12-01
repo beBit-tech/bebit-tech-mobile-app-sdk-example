@@ -71,6 +71,7 @@ class PageKeyViewController: UIViewController {
 
     // Action method for the send button
     @objc func sendButtonTapped() {
+        // OmniSegment SDK
         // Manually set current page for analytics tracking
         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
         OmniSegment.setCurrentPage(textField.text ?? "")

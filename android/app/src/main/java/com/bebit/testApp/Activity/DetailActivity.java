@@ -55,6 +55,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void submitCustomEvent() {
+        // OmniSegment SDK custom event
         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#custom-event
         // Purpose: Track custom events specific to your business needs (e.g., newsletter subscription)
         OSGEvent customEvent = OSGEvent.custom("SubscriptionEmail", "RENEE@bebit-tech.com");
@@ -66,7 +67,7 @@ public class DetailActivity extends AppCompatActivity {
     private void submitWishEvent(String productId, String productName, int productPrice) {
         OSGProduct product = new OSGProduct(productId, productName);
         product.price = productPrice;
-
+        // OmniSegment SDK
         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#product-detail-impressions
         // Purpose: Track when users add products to their wishlist (for remarketing and user preference analysis)
         OSGEvent wishEvent = OSGEvent.addToWishlist(Arrays.asList(product));
@@ -83,6 +84,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // OmniSegment SDK
         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-current-page
         // Purpose: Track current page/screen for user journey analytics
         OmniSegment.setCurrentPage("Detail");
@@ -91,7 +93,7 @@ public class DetailActivity extends AppCompatActivity {
 
             OSGProduct product = new OSGProduct(object.getId(), object.getTitle());
             product.price = (int) object.getPrice();
-
+            // OmniSegment SDK
             // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#product-impressions
             // Purpose: Track product detail page views for conversion funnel analysis
             OSGEvent event = OSGEvent.productImpression(Arrays.asList(product));

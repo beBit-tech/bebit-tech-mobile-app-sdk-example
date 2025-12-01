@@ -41,17 +41,19 @@ public class TestApplication extends Application {
     // Purpose: Enable debug logs for development/testing to see SDK events in logcat
     OmniSegment.enableDebugLogs(true);
 
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Installation#step-2---initialize-omnisegment
     // Purpose: Initialize OmniSegment SDK with your API key and organization ID
     // Replace with your actual API key and organization ID from the OmniSegment dashboard
     OmniSegment.initialize(this, "xxx-xxx-xxx-xxx-xxx", "OA-XXX");
 
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Track-events#track-events
     // Purpose: Set application metadata for tracking and analytics
     OmniSegment.setAppId("test-AppId");
     OmniSegment.setAppName("test-AppName");
     OmniSegment.setAppVersion("test-2024090401");
-
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Track-events#track-events
     // Purpose: Set unique device identifier for user tracking across sessions
     String deviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -70,11 +72,11 @@ public class TestApplication extends Application {
             String token = task.getResult();
 
             Log.d(TAG, "FCM registration token: " + token);
-
+            // OmniSegment SDK
             // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-firebase-cloud-messaging-token
             // Purpose: Register FCM token with OmniSegment to enable push notifications
             OmniSegment.setFCMToken(token);
-
+            // OmniSegment SDK
             // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#app-open
             // Purpose: Track app open event for user engagement analytics
             OmniSegment.trackEvent(OSGEvent.appOpen());

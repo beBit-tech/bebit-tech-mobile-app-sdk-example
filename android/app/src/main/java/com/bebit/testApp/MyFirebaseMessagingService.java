@@ -39,7 +39,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
   @Override
   public void onMessageReceived(RemoteMessage msg) {
     Map<String, String> data = msg.getData();
-
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Workflow-triggered-app-popup-setup
     // Purpose: use the app push mechanism to trigger app popups based on incoming push notification data from Firebase.
     // The mechanism involves evaluating notification data to determine whether to display the message or suppress it.
@@ -141,7 +141,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
       String dest = data.get("destination_url");
       Log.d(TAG, "NotifClick" + " User tapped push → " + dest);
-
+      // OmniSegment SDK
       // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Workflow-triggered-app-popup-setup
       // Purpose: use the app push mechanism to trigger app popups based on incoming push notification data from Firebase.
       // The mechanism involves evaluating notification data to determine whether to display the message or suppress it.

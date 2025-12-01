@@ -122,7 +122,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    
+    // OmniSegment SDK
     // Track Search Event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     NSDictionary *searchLabel = @{@"search_string": searchBar.text};
@@ -135,17 +135,18 @@
 #pragma mark - Logout Handler
 
 - (void)handleLogout {
+    // OmniSegment SDK
     // Track appUnsubscribe event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     OSGEvent *event = [OSGEvent appUnsubscribe];
     event.location = @"sidebar";
     event.locationTitle = @"Sidebar";
     [OmniSegment trackEvent:event];
-
+    // OmniSegment SDK
     // Track When the user logs out
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#logout
     [OmniSegment logout];
-
+    // OmniSegment SDK
     // If you want to reset uid without logout event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#clear-user-uid
     [OmniSegment clearUid];

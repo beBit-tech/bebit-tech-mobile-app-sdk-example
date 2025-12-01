@@ -57,6 +57,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // OmniSegment SDK
     // Manually set current page for analytics tracking
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
     [OmniSegment setCurrentPage:@"Webview"];

@@ -34,7 +34,7 @@
     
     // Load cart items
     [self loadCartItems];
-
+    // OmniSegment SDK
     // Manually set current page for analytics tracking
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
     [OmniSegment setCurrentPage:@"Cart"];
@@ -131,7 +131,7 @@
         osgProduct.variant = @"{\"color\": \"white\"}";
         [osgProducts addObject:osgProduct];
     }
-    
+    // OmniSegment SDK
     // Track checkout initiation event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     OSGEvent *event = [OSGEvent checkout:osgProducts];
@@ -200,7 +200,7 @@
     }
     
     NSString *transactionId = [NSString stringWithFormat:@"REFUND%ld", (long)[[NSDate date] timeIntervalSince1970]];
-    
+    // OmniSegment SDK
     // Track refund event with transaction details
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
     OSGEvent *event = [OSGEvent refundWithTransactionId:transactionId revenue:@(totalRevenue) products:osgProducts];
@@ -275,7 +275,7 @@
         osgProduct.brand = @"chiikawa";           
         osgProduct.sku = @"chiikawawa";           
         osgProduct.variant = @"{\"color\": \"white\"}";  
-        
+        // OmniSegment SDK
         // Remove from cart event with product details
         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
         OSGEvent *event = [OSGEvent removeFromCart:@[osgProduct]];

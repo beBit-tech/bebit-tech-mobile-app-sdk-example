@@ -40,7 +40,7 @@ struct CartView: View {
 
                             let transactionId = UUID().uuidString
                             let revenue = cartManager.total
-
+                            // OmniSegment SDK
                             // Track purchase event with transaction details
                             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                             let purchaseEvent = OSGEvent.purchase(transactionId, revenue: NSNumber(value: revenue), products: osgProducts)
@@ -72,7 +72,7 @@ struct CartView: View {
 
                             let transactionId = UUID().uuidString
                             let revenue = cartManager.total
-
+                            // OmniSegment SDK
                             // Track refund event with transaction details
                             // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                             let refundEvent = OSGEvent.refund(transactionId, revenue: NSNumber(value: revenue), products: osgProducts)
@@ -101,6 +101,7 @@ struct CartView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
+                        // OmniSegment SDK
                         // Track custom subscription email event
                         // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                         let cutomEvent = OSGEvent.custom(action: "SubscriptionEmail", value: "renee.wei@bebit-tech.com")
@@ -127,7 +128,7 @@ struct CartView: View {
                         osgProduct.price = NSNumber(value: product.price)
                         return osgProduct
                     }
-
+                    // OmniSegment SDK
                     // Track checkout initiation event
                     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Track-events#build-in-events
                     let event = OSGEvent.checkout(osgProducts)

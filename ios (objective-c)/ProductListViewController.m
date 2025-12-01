@@ -58,7 +58,7 @@
     event.locationTitle = @"product-list-page";
     event.currencyCode = @"TWD";
     [OmniSegment trackEvent:event];
-
+    // OmniSegment SDK
     // Manually set current page for analytics tracking
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Usage#set-current-page
     [OmniSegment setCurrentPage:@"Home"];
@@ -238,8 +238,9 @@
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
     NSString *currentDate = [dateFormatter stringFromDate:[NSDate date]];
     
-    // Track custom event
+    // OmniSegment SDK custom event
     // https://github.com/beBit-tech/bebit-tech-ios-app-sdk/wiki/Send-Action-(Event)-Examples#custom-event
+    // Purpose: Track custom events specific to your business needs (e.g., newsletter subscription)
     NSDictionary *eventData = @{
         @"ClickDate": currentDate,
         @"EmailEvent": @"renee.wei@bebit-tech.com",

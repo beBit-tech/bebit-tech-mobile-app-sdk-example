@@ -64,7 +64,7 @@ public class ManagmentCart {
         }else{
             listItem.get(position).setNumberInCart(listItem.get(position).getNumberInCart()-1);
         }
-
+        // OmniSegment SDK
         // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Send-Action-(Event)-Examples#remove-from-cart
         // Purpose: Track when users remove items from cart to understand cart abandonment patterns
         OSGEvent cartEvent = OSGEvent.removeFromCart(Arrays.asList(cartProduct));

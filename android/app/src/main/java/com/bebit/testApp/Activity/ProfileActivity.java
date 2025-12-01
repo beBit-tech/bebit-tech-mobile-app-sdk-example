@@ -42,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
     } else {
       webView.loadUrl("https://bebit2.shoplineapp.com/");
     }
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#integrating-omnisegment-sdk-with-webview-pages-in-android
     // Purpose: Enable OmniSegment tracking in WebView by injecting JavaScript interface for web-to-native event communication
     OmniSegment.addOmniSegmentJavascriptInterface(webView);
@@ -50,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
   @Override
   protected void onResume() {
     super.onResume();
+    // OmniSegment SDK
     // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#set-current-page
     // Purpose: Track current page/screen for user journey analytics
     OmniSegment.setCurrentPage("Webview");
@@ -62,6 +64,7 @@ public class ProfileActivity extends AppCompatActivity {
       if (resetLocationRunnable != null) {
         handler.removeCallbacks(resetLocationRunnable);
       }
+      // OmniSegment SDK
       // Wiki: https://github.com/beBit-tech/bebit-tech-android-app-sdk/wiki/Usage#managing-webview-document-location
       // Purpose: Reset WebView location tracking when navigating to new pages for accurate page view analytics
       OmniSegment.resetWebViewLocation();

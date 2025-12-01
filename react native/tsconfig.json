@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    // Keep RN defaults and explicitly enable interop/JSX so editors pick up React types
+    "jsx": "react-native",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["react-native"]
+  },
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
